@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krabps</title>
+    <style>
+        header {
+            background-color: rgb(153, 24, 24);
+            color: rgb(137, 12, 12);
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+    </style>
+    <nav style="background-color: #000; color: red; text-align: center; padding: 10px; font-size: 20px; 
+    border-color: rgb(156, 12, 24); border-width: 100px;">
+        <a href="#" style="color: red; margin: 0 15px; text-decoration: none;">GameZone</a>
+        <a href="#" style="color: red; margin: 0 15px; text-decoration: none;">Crosebook</a>
+        <a href="#" style="color: red; margin: 0 15px; text-decoration: none;">Create Account</a>
+        <a href="#" style="color: red; margin: 0 15px; text-decoration: none;">Contact Us</a>
+    </nav>
+</head>
+<body>
+    
+    <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+        <div style="border: 1px solid black; padding: 10px; background-color: black; color: red;">
+            <table style="width: 100%; color: red; text-align: center;">
+                <style>
+                    th {
+                        color: white;
+                    }
+                </style>
+                
+                <thead>
+                    <tr>
+                         
+                        <th style="text-align: center;" style="border: 3px solid blue;">Shillong</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 3px solid rgb(137, 12, 12) white;">1st Round</td>
+                        <td style="border: 3px solid color white;">2nd round</td>
+                    </tr>
+                    <tr>
+                        
+                            <td style="color: white; font-size: 2em;">30</td>
+                            <td style="color: white; font-size: 2em;">80</td>
+                            
+
+                        
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="border: 1px solid black; padding: 10px; background-color: black; color: red;">
+            <table style="width: 100%; color: red; text-align: center;">
+                <thead>
+                    <tr>
+                        <th >Jowai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td >1st Round</td>
+                        <td >2nd Round</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white; font-size: 2em;">72</td>
+                            <td style="color: white; font-size: 2em;">09</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="border: 1px solid black; padding: 10px; background-color: black; color: red;">
+            <table style="width: 100%; color: red; text-align: center;">
+                <thead>
+                    <tr>
+                        <th>Khanapara</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st Round</td>
+                        <td>2nd Round</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white; font-size: 2em;">09</td>
+                            <td style="color: white; font-size: 2em;">39</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="border: 1px solid black; padding: 10px; background-color: black; color: red;">
+            <table style="width: 100%; color: red; text-align: center;">
+                <thead>
+                    <tr>
+                        <th>Ladrymbai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st Round</td>
+                       
+                    </tr>
+                    <tr>
+                        <td style="color: white; font-size: 2em;">56</td>
+                            
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div style="background-color: rgb(11, 12, 11); color: rgb(180, 12, 12); text-align: center; padding: 15px; font-size: 22px; margin-top: 10px; border: 2px solid black;">
+        A brown fox jumps over the lazy dog.
+    </div>
+
+    <div style="margin: 30px auto; max-width: 900px;">
+        <h2 style="text-align:center; color: #900;">Forecast</h2>
+        <table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+            <thead>
+                <tr style="background: #222; color: #fff;">
+                    <th style="padding: 10px; border: 1px solid #900;">Place</th>
+                    <th style="padding: 10px; border: 1px solid #900;">Select Numbers (01-100)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #900; text-align:center;">Jowai</td>
+                    <td style="padding: 10px; border: 1px solid #900;">
+                        <div id="jowai-chart" style="display: flex; flex-wrap: wrap; gap: 4px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #900; text-align:center;">Ladrymbai</td>
+                    <td style="padding: 10px; border: 1px solid #900;">
+                        <div id="ladrymbai-chart" style="display: flex; flex-wrap: wrap; gap: 4px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #900; text-align:center;">Amount</td>
+                    <td style="padding: 10px; border: 1px solid #900;">
+                        <input type="number" id="amount" min="1" style="width: 100px;"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="text-align:center; margin-bottom: 20px;">
+            <button id="generate-invoice" style="padding: 10px 30px; background: #900; color: #fff; border: none; font-size: 18px; cursor: pointer;">Generate Invoice</button>
+        </div>
+        <div id="selected-numbers" style="margin-bottom: 20px; text-align:center;">
+            <strong style="color:#900;">Jowai:</strong>
+            <span id="jowai-selected" style="margin-right: 30px;"></span>
+            <strong style="color:#900;">Ladrymbai:</strong>
+            <span id="ladrymbai-selected"></span>
+        </div>
+        <div id="invoice" style="display:none; border:2px solid #900; padding:20px; background:#222; color:#fff; max-width:500px; margin:0 auto;">
+            <h3 style="color:#fff;">Invoice</h3>
+            <div id="invoice-content"></div>
+        </div>
+    </div>
+    <script>
+        // Generate number buttons 01-100 for each place
+        function createNumberChart(containerId, place) {
+            const container = document.getElementById(containerId);
+            for (let i = 1; i <= 100; i++) {
+                const num = i.toString().padStart(2, '0');
+                const btn = document.createElement('button');
+                btn.textContent = num;
+                btn.value = num;
+                btn.style = "width:32px;height:32px;margin:1px;background:#fff;color:#900;border:1px solid #900;border-radius:4px;cursor:pointer;font-weight:bold;";
+                btn.addEventListener('click', function() {
+                    selectNumber(place, num, btn);
+                });
+                container.appendChild(btn);
+            }
+        }
+
+        // Store selected numbers
+        const selected = {
+            Jowai: [],
+            Ladrymbai: []
+        };
+
+        function selectNumber(place, num, btn) {
+            const otherPlace = place === 'Jowai' ? 'Ladrymbai' : 'Jowai';
+            // Can't select same number in both places
+            if (selected[otherPlace].includes(num)) {
+                alert('You cannot select the same number in both places.');
+                return;
+            }
+            // Can't select repeat number in same place
+            if (selected[place].includes(num)) {
+                // Deselect
+                selected[place] = selected[place].filter(n => n !== num);
+                btn.style.background = '#fff';
+                btn.style.color = '#900';
+            } else {
+                selected[place].push(num);
+                btn.style.background = '#900';
+                btn.style.color = '#fff';
+            }
+            updateSelectedDisplay();
+        }
+
+        function updateSelectedDisplay() {
+            document.getElementById('jowai-selected').textContent = selected.Jowai.join('  ');
+            document.getElementById('ladrymbai-selected').textContent = selected.Ladrymbai.join('  ');
+        }
+
+        // Reset all buttons' style if needed
+        function resetCharts() {
+            ['jowai-chart', 'ladrymbai-chart'].forEach((id, idx) => {
+                const place = idx === 0 ? 'Jowai' : 'Ladrymbai';
+                const chart = document.getElementById(id);
+                Array.from(chart.children).forEach(btn => {
+                    if (selected[place].includes(btn.value)) {
+                        btn.style.background = '#900';
+                        btn.style.color = '#fff';
+                    } else {
+                        btn.style.background = '#fff';
+                        btn.style.color = '#900';
+                    }
+                });
+            });
+        }
+
+        // Invoice generation
+        document.getElementById('generate-invoice').onclick = function() {
+            const amount = document.getElementById('amount').value;
+            let invoiceHtml = '';
+            if (selected.Jowai.length > 0 && selected.Ladrymbai.length > 0) {
+                invoiceHtml = '<span style="color:#ff0;">Please select numbers for only one place at a time.</span>';
+            } else if (selected.Jowai.length > 0) {
+                invoiceHtml = `<strong>Place:</strong> Jowai<br>
+                    <strong>Numbers:</strong> ${selected.Jowai.join(', ')}<br>
+                    <strong>Amount:</strong> ₹${amount}`;
+            } else if (selected.Ladrymbai.length > 0) {
+                invoiceHtml = `<strong>Place:</strong> Ladrymbai<br>
+                    <strong>Numbers:</strong> ${selected.Ladrymbai.join(', ')}<br>
+                    <strong>Amount:</strong> ₹${amount}`;
+            } else {
+                invoiceHtml = '<span style="color:#ff0;">Please select at least one number.</span>';
+            }
+            document.getElementById('invoice-content').innerHTML = invoiceHtml;
+            document.getElementById('invoice').style.display = 'block';
+        };
+
+        // Initialize charts
+        createNumberChart('jowai-chart', 'Jowai');
+        createNumberChart('ladrymbai-chart', 'Ladrymbai');
+    </script>
+</body>
+
+
+</html>
