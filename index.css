@@ -1,1 +1,249 @@
 
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #18181b;
+  color: #f3f3f3;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #a71d2a 80%, #222 100%);
+  color: #fff;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Navigation */
+nav {
+  background: #1f1f23;
+  display: flex;
+  justify-content: center;
+  padding: 14px 0;
+  gap: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+nav a {
+  color: #ff4a4a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: #ff4a4a;
+  color: #fff;
+}
+
+.main-tables {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 32px auto 0 auto;
+  max-width: 1200px;
+}
+
+.result-table {
+  background: #232326;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.11);
+  border: 1.5px solid #900;
+  padding: 16px 12px;
+  min-width: 180px;
+  max-width: 220px;
+}
+
+.result-table table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ff4a4a;
+}
+
+.result-table th {
+  color: #fff;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+
+.result-table td {
+  color: #eee;
+  padding: 7px 5px;
+  font-size: 1rem;
+  border-bottom: 1px solid #2c2c2f;
+}
+
+.result-table td.round-label {
+  color: #ff4a4a;
+  font-weight: bold;
+}
+
+.result-table td.result-number {
+  font-size: 2em;
+  color: #fff;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  letter-spacing: 2px;
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(90deg, #18181b 80%, #a71d2a 100%);
+  color: #ffbaba;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1.3rem;
+  margin: 20px auto 0 auto;
+  border-radius: 8px;
+  max-width: 900px;
+  border: 2px solid #222;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.09);
+}
+
+.forecast-section {
+  margin: 40px auto 0 auto;
+  max-width: 960px;
+  background: #232326;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.11);
+  padding: 32px 24px;
+}
+
+.forecast-section h2 {
+  text-align: center;
+  color: #ff4a4a;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.forecast-table th,
+.forecast-table td {
+  border: 1.5px solid #ff4a4a;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.forecast-table th {
+  background: #18181b;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Number selection chart */
+.number-chart, #ladrymbai-chart, #jowai-chart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.number-btn {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  color: #a71d2a;
+  border: 2px solid #a71d2a;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.number-btn.selected {
+  background: #a71d2a;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Amount input */
+#amount {
+  width: 120px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1.5px solid #ff4a4a;
+  font-size: 1.1rem;
+  background: #18181b;
+  color: #ff4a4a;
+  outline: none;
+  margin-left: 12px;
+}
+
+/* Buttons */
+#generate-invoice {
+  padding: 12px 34px;
+  background: #ff4a4a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+#generate-invoice:hover {
+  background: #a71d2a;
+  color: #fff;
+}
+
+#selected-numbers strong {
+  color: #ff4a4a;
+}
+
+/* Invoice */
+#invoice {
+  display: none;
+  border: 2px solid #ff4a4a;
+  padding: 24px;
+  background: #18181b;
+  color: #fff;
+  max-width: 480px;
+  margin: 32px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+}
+
+#invoice h3 {
+  color: #fff;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-tables {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .forecast-section {
+    padding: 16px 6px;
+  }
+}
