@@ -1,0 +1,82 @@
+ 
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 60%, #e10600 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+            padding: 2.5rem 2rem;
+            max-width: 400px;
+            width: 100%;
+            border-top: 8px solid #e10600;
+        }
+        .login-container h2 {
+            color: #e10600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="file"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f9f9f9;
+            color: #1a1a1a;
+            transition: border-color 0.2s;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus,
+        .form-group textarea:focus {
+            border-color: #e10600;
+            outline: none;
+        }
+        .form-group input[type="file"] {
+            background: #fff;
+            padding: 0.3rem;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: #e10600;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+        }
+        .login-btn:hover {
+            background: #b30000;
+        }
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 1.2rem 0.5rem;
+            }
+        }
+    
